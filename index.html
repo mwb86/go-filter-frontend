@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="grumblr">
+  <head>
+    <meta charset="utf-8">
+    <title>Grumblr</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <script src="./js/grumblr.module.js" charset="utf-8"></script>
+    <script src="./js/grumblr.controller.js" charset="utf-8"></script>
+    <script src="./js/index.directive.js" charset="utf-8"></script>
+    <script src="./js/show.directive.js" charset="utf-8"></script>
+    <script src="./js/grumblr.factory.js" charset="utf-8"></script>
+    <script src="./js/new.controller.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <img id="title" src="https://algorithmia.com/v1/data/.algo/deeplearning/DeepFilter/temp/title5.jpg" alt="" />
+    <div ng-controller="GrumbleCtrl as main">
+      <button ng-click="getGrumbles()">Get All Filters</button>
+
+      <div grumble-index></div>
+
+      <grumble-show></grumble-show>
+    </div>
+    <!-- <div ng-controller="newCtrl as new">
+      <button ng-click="new.showGrumbles()">Log Grumbles</button>
+    </div> -->
+  </body>
+</html>
